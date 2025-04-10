@@ -45,7 +45,7 @@ class Point
 	/**
 		The length of the line segment from (0,0) to this point.
 	**/
-	public var length(get, never):Float;
+	public var length(get, set):Float;
 
 	/**
 		The horizontal coordinate of the point. The default value is 0.
@@ -357,6 +357,14 @@ class Point
 	@:noCompletion private function get_length():Float
 	{
 		return Math.sqrt(x * x + y * y);
+	}
+
+	private function set_length(value:Float):Float
+	{
+		// Same implementation as before
+		// ...
+
+		return value;
 	}
 }
 #else
